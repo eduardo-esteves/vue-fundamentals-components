@@ -1,14 +1,16 @@
-const app = Vue.createApp({
+const app = Vue.createApp({})
 
+.component('plan-picker', {
+	template: '#planPickerTemplate',
 	data() {
 		return {
 			plans: ['The Single', 'The Curious', 'The Addict']
 		}
 	}
-
 })
+
 .component('plan', {
-	template: '#plan-template',
+	template: '#planTemplate',
 	props: {
 		name: {
 			type: String,
@@ -22,4 +24,5 @@ const app = Vue.createApp({
 		},
 	}
 })
+
 .mount('#app')
