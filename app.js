@@ -10,8 +10,16 @@ const app = Vue.createApp({
 .component('plan', {
 	template: '#plan-template',
 	props: {
-		name: String,
-		price: Number,
+		name: {
+			type: String,
+			default: 'The Single',
+			required: true,
+		},
+		price: {
+			type: Number,
+			default: 0.00,
+			required: false,
+		},
 	}
 })
 .mount('#app')
